@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /wa-apps/apps/templates/actions/backend/Backend.html:21
+msgid "Hello world"
+msgstr "12"
+
+#: /wa-apps/apps/templates/actions/backend/Backend.html:26
+msgid "Navigation"
+msgstr "312"
+
+#: /wa-apps/apps/templates/actions/backend/Backend.html:29
+msgid "Menu item 1"
+msgstr "Cest \" ' ' \""
+
+#: /wa-apps/apps/templates/actions/backend/Backend.html:32
+msgid "Menu item 2"
+msgstr "ghj"
+
+#: /wa-apps/apps/templates/actions/backend/Backend.html:35
+msgid "Menu item 3"
+msgstr ""
+
+#: /wa-apps/apps/templates/actions/backend/Backend.html:44
+msgid "Woohoo, Webasyst app is ready!"
+msgid_plural "Woohoo, Webasyst app is ready2!"
+msgstr[0] "0"
+msgstr[2] "0"
+msgstr[3] "1"
