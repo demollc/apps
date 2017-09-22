@@ -15,3 +15,6 @@
 # Контакты
 
 Для связи используйте support@demollc.pw
+
+Donate:
+https://www.paypal.me/Alexkurd
