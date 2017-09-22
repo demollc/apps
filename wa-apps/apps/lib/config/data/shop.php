@@ -4,56 +4,53 @@ return array(
     'id' => 'shop',
     'hooks' => array(
         //shop 7.2.13 146
-          'backend_personal' => array(
-              'params' => false,
-              ),
           'backend_reports_channels' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_settings_stocks' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_tutorial' => array(
               'params' => false,
               ),
           'customers_merge' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_checkout_stock_rules' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_products' => array(
-              'params' => false,
+              'params' => true,
               ),
           'order_action.create' => array(
-              'params' => false,
+              'params' => true,
               ),
           'order_calculate_discount' => array(
-              'params' => false,
+              'params' => true,
               ),
           'product_custom_fields' => array(
               'params' => false,
               ),
           'product_mass_update' => array(
-              'params' => false,
+              'params' => true,
               ),
           'product_sku_delete' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_category_dialog' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_customer' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_customers_list' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_customers' => array(
               'params' => false,
               ),
           'backend_followup_edit' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_menu' => array(
               'params' => false,
@@ -62,37 +59,39 @@ return array(
               'params' => false,
               ),
           'backend_notification_edit' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_notification_save' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_order_edit' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_order' => array(
-              'params' => false,
+              'params' => true,
+              'array_keys' => array('title_suffix', 'action_button', 'action_link', 'info_section'),
               ),
           'backend_orders' => array(
               'params' => false,
               ),
           'backend_product_edit' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_product_sku_settings' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_product' => array(
-              'params' => false,
+              'params' => true,
+              'array_keys' => array(),
               ),
           'backend_products' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_reports' => array(
               'params' => false,
               ),
           'backend_set_dialog' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_settings_affiliate' => array(
               'params' => false,
@@ -104,58 +103,58 @@ return array(
               'params' => false,
               ),
           'backend_tutorial_page' => array(
-              'params' => false,
+              'params' => true,
               ),
           'backend_welcome' => array(
               'params' => false,
               ),
           'cart_add' => array(
-              'params' => false,
+              'params' => true,
               ),
           'cart_delete' => array(
-              'params' => false,
+              'params' => true,
               ),
           'category_delete' => array(
-              'params' => false,
+              'params' => true,
               ),
           'category_save' => array(
-              'params' => false,
+              'params' => true,
               ),
           'currency_delete' => array(
-              'params' => false,
+              'params' => true,
               ),
           'followup_delete' => array(
-              'params' => false,
+              'params' => true,
               ),
           'followup_save' => array(
-              'params' => false,
+              'params' => true,
               ),
           'followup_send' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_cart' => array(
               'params' => false,
               ),
           'frontend_category' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_checkout' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_error' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_footer' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_head' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_header' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_homepage' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_my_affiliate' => array(
               'params' => false,
@@ -164,10 +163,10 @@ return array(
               'params' => false,
               ),
           'frontend_my_order' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_my_orders' => array(
-              'params' => false,
+              'params' => true,
               ),
           'frontend_my' => array(
               'params' => false,
@@ -179,34 +178,35 @@ return array(
               'params' => false,
               ),
           'frontend_product' => array(
-              'params' => false,
+              'params' => true,
+              'array_keys' => array('menu','cart','block_aux','block'),
               ),
           'frontend_search' => array(
               'params' => false,
               ),
           'image_thumb' => array(
-              'params' => false,
+              'params' => true,
               ),
           'image_upload' => array(
-              'params' => false,
+              'params' => true,
               ),
           'orders_collection.filter' => array(
-              'params' => false,
+              'params' => true,
               ),
           'orders_collection' => array(
-              'params' => false,
+              'params' => true,
               ),
           'product_delete' => array(
-              'params' => false,
+              'params' => true,
               ),
           'product_duplicate' => array(
-              'params' => false,
+              'params' => true,
               ),
           'product_save' => array(
-              'params' => false,
+              'params' => true,
               ),
           'products_collection' => array(
-              'params' => false,
+              'params' => true,
               ),
           'reset_complete' => array(
               'params' => false,
@@ -215,16 +215,16 @@ return array(
               'params' => false,
               ),
           'rights.config' => array(
-              'params' => false,
+              'params' => true,
               ),
           'set_delete' => array(
-              'params' => false,
+              'params' => true,
               ),
           'set_save' => array(
-              'params' => false,
+              'params' => true,
               ),
           'signup' => array(
-              'params' => false,
+              'params' => true,
               ),
             // wa()->event(array('shop', 'contacts_delete'), $params);
             // wa()->event(array('shop', 'contacts_links'), $links);
@@ -232,8 +232,8 @@ return array(
             // wa()->event(array($this->app_id, 'sitemap'), $route);
             // wa()->event(array($this->application, 'routing'), $route);
             // wa()->event(array('shop', 'update.route'), $params);
-            // 'order_action_form.'.$action_id, $data);
-            // 'order_action.'.$this->getId(), $data);
+            // TODO 'order_action_form.'.$action_id, $data);
+            // TODO 'order_action.'.$this->getId(), $data);
         )
     );
 //public function event($name, &$params = null, $array_keys = null)
