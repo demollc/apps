@@ -7,6 +7,7 @@ class appsHubFrontend_topicHandler extends waEventHandler
   1 => 'body',
   2 => 'comments',
 )){
-        return wa('apps')->event('hub.frontend_topic', $params, $array_keys);
+		$event = wa('apps')->event('hub.frontend_topic', $params, $array_keys);
+        return ifempty($event);
     }
 }

@@ -6,6 +6,7 @@ class appsSiteBackend_settingsHandler extends waEventHandler
   0 => 'action_button_li',
   1 => 'section',
 )){
-        return wa('apps')->event('site.backend_settings', $params, $array_keys);
+		$event = wa('apps')->event('site.backend_settings', $params, $array_keys);
+        return ifempty($event);
     }
 }

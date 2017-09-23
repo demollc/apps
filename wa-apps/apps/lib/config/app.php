@@ -1,12 +1,14 @@
 <?php
 return array (
   'name' => 'Apps',
-  'icon' => 
+  'icon' =>
   array (
     48 => 'img/apps48.png',
     96 => 'img/apps96.png',
+    24 => 'img/apps24.png',
+    16 => 'img/apps16.png',
   ),
-  'version' => '0.1',
-  'vendor' => '--',
+  'version' => '1.0',
+  'vendor' => '991739',
   'plugins' => true,
 );

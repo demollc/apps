@@ -7,6 +7,7 @@ class appsBlogBackend_post_editHandler extends waEventHandler
   1 => 'toolbar',
   2 => 'editor_tab',
 )){
-        return wa('apps')->event('blog.backend_post_edit', $params, $array_keys);
+		$event = wa('apps')->event('blog.backend_post_edit', $params, $array_keys);
+        return ifempty($event);
     }
 }

@@ -8,6 +8,7 @@ class appsShopBackend_orderHandler extends waEventHandler
   2 => 'action_link',
   3 => 'info_section',
 )){
-        return wa('apps')->event('shop.backend_order', $params, $array_keys);
+		$event = wa('apps')->event('shop.backend_order', $params, $array_keys);
+        return ifempty($event);
     }
 }

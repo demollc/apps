@@ -8,6 +8,7 @@ class appsBlogFrontend_action_defaultHandler extends waEventHandler
   2 => 'head',
   3 => 'sidebar',
 )){
-        return wa('apps')->event('blog.frontend_action_default', $params, $array_keys);
+		$event = wa('apps')->event('blog.frontend_action_default', $params, $array_keys);
+        return ifempty($event);
     }
 }

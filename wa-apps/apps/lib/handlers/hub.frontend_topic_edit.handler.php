@@ -6,6 +6,7 @@ class appsHubFrontend_topic_editHandler extends waEventHandler
   0 => 'top_block',
   1 => 'bottom_block',
 )){
-        return wa('apps')->event('hub.frontend_topic_edit', $params, $array_keys);
+		$event = wa('apps')->event('hub.frontend_topic_edit', $params, $array_keys);
+        return ifempty($event);
     }
 }

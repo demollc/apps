@@ -7,6 +7,7 @@ class appsBlogBackend_sidebarHandler extends waEventHandler
   1 => 'section',
   2 => 'system',
 )){
-        return wa('apps')->event('blog.backend_sidebar', $params, $array_keys);
+		$event = wa('apps')->event('blog.backend_sidebar', $params, $array_keys);
+        return ifempty($event);
     }
 }

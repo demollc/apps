@@ -8,6 +8,7 @@ class appsShopFrontend_productHandler extends waEventHandler
   2 => 'block_aux',
   3 => 'block',
 )){
-        return wa('apps')->event('shop.frontend_product', $params, $array_keys);
+		$event = wa('apps')->event('shop.frontend_product', $params, $array_keys);
+        return ifempty($event);
     }
 }
