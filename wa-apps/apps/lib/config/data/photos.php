@@ -4,9 +4,6 @@ return array(
     'id' => 'photos',
     'hooks' => array(
     //photos 1.2.7 26
-          'extra_prepare_collection' => array(
-              'params' => true,
-              ),
           'album_delete' => array(
               'params' => true,
               ),
@@ -32,6 +29,9 @@ return array(
               'params' => false,
               ),
           'collection' => array(
+              'params' => true,
+              ),
+          'extra_prepare_collection' => array(
               'params' => true,
               ),
           'frontend_assets' => array(
@@ -67,12 +67,33 @@ return array(
           'prepare_photos_backend' => array(
               'params' => true,
               ),
+          'prepare_photos_frontend' => array(
+              'params' => true,
+              ),
+          'routing' => array(
+              'params' => true,
+              ),
           'search_frontend_link' => array(
+              'params' => true,
+              ),
+          'backend_pages_sidebar' => array(
+              'params' => true,
+              ),
+          'backend_page_edit' => array(
+              'params' => true,
+              'array_keys' => array('action_button_li', 'section', 'settings_section'),
+              ),
+          'page_save' => array(
+              'params' => true,
+              ),
+          'page_edit' => array(
+              'params' => true,
+              ),
+          'page_delete' => array(
               'params' => true,
               ),
             // wa()->event(array('photos', 'contacts_delete'), $params);
             // wa()->event(array('photos', 'contacts_links'), $params);
-            // wa()->event(array('photos', 'routing'), $routes);
         ),
     );
 //public function event($name, &$params = null, $array_keys = null)

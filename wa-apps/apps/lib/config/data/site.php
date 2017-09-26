@@ -27,6 +27,22 @@ return array(
           'routing' =>  array(
               'params' => true,
           ),
+          'backend_pages_sidebar' => array(
+              'params' => true,
+              ),
+          'backend_page_edit' => array(
+              'params' => true,
+              'array_keys' => array('action_button_li', 'section', 'settings_section'),
+              ),
+          'page_save' => array(
+              'params' => true,
+              ),
+          'page_edit' => array(
+              'params' => true,
+              ),
+          'page_delete' => array(
+              'params' => true,
+              ),
         )
     );
 //public function event($name, &$params = null, $array_keys = null)

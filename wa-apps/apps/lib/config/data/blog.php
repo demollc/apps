@@ -63,12 +63,28 @@ return array(
           'comment_validate' => array(
               'params' => true,
               ),
+          'contacts_delete' => array(
+              'params' => true,
+              ),
           'cron_action' => array(
               'params' => true,
+              ),
+          'followup_send' => array(
+              'params' => true,
+                //deprecated?
               ),
           'frontend_action_default' => array(
               'params' => true,
               'array_keys' => array('nav_before', 'footer', 'head', 'sidebar'),
+              ),
+          'frontend_action_error' => array(
+              'params' => true,
+              ),
+          'frontend_action_page' => array(
+              'params' => true,
+              ),
+          'frontend_action_post' => array(
+              'params' => true,
               ),
           'frontend_post' => array(
               'params' => true,
@@ -80,16 +96,25 @@ return array(
           'post_predelete' => array(
               'params' => true,
               ),
-          'post_validate' => array(
+          'post_prepublish' => array(
               'params' => true,
               ),
-         'post_prepublish' => array(
+          'post_presave' => array(
               'params' => true,
               ),
-         'post_preshedule' => array(
+          'post_preshedule' => array(
               'params' => true,
               ),
-         'post_presave' => array(
+          'post_publish' => array(
+              'params' => true,
+              ),
+          'post_save' => array(
+              'params' => true,
+              ),
+          'post_shedule' => array(
+              'params' => true,
+              ),
+         'post_validate' => array(
               'params' => true,
               ),
           'prepare_blogs_frontend' => array(
@@ -119,6 +144,9 @@ return array(
           'rights.config' => array(
               'params' => true,
               ),
+          'routing' => array(
+              'params' => true,
+              ),
           'search_blogs_frontend' => array(
               'params' => true,
               ),
@@ -131,9 +159,22 @@ return array(
           'search_posts_backend' => array(
               'params' => true,
               ),
-            // frontend_action_'.$action, $params, $fields);
-            // wa()->event(array('blog', 'contacts_delete'), $params);
-            // wa()->event(array('blog', 'routing'), $route);
+          'backend_pages_sidebar' => array(
+              'params' => true,
+              ),
+          'backend_page_edit' => array(
+              'params' => true,
+              'array_keys' => array('action_button_li', 'section', 'settings_section'),
+              ),
+          'page_save' => array(
+              'params' => true,
+              ),
+          'page_edit' => array(
+              'params' => true,
+              ),
+          'page_delete' => array(
+              'params' => true,
+              ),
         ),
     );
 //public function event($name, &$params = null, $array_keys = null)
