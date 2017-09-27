@@ -1,7 +1,11 @@
 <?php
 
 return array(
-    'settings/?'    => 'settings/general',
-    'plugins/?'     => 'plugins/',
-    ''              => 'backend/',
+    'settings/payment/?'                              => 'settings/payment',
+    'settings/payment/add/<company_id>/<plugin_id>/?' => 'settings/paymentEdit',
+    'settings/payment/<instance_id>/?'                => 'settings/paymentEdit',
+    'settings/sms/?'    => 'settings/sms',
+    'settings/'         => 'settings/general',
+    'plugins/?'         => 'plugins/',
+    ''                  => 'backend/',
 );

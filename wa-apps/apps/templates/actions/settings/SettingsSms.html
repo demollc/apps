@@ -1,0 +1,84 @@
+<div class="apps-sms-settings-page" id="apps-sms-settings-page">
+    {* HEADER *}
+    <h1 class="c-page-header">[`SMS`]</h1>
+
+    <div class="apps-sms-settings-fields-block">
+        <form action="?module=settings&action=smsSave" method="post">
+            <div class="">
+                {if count($sms_adapters)}
+                    {foreach $sms_adapters as $i => $a}
+                        <div class="field-group">
+                            <div class="field">
+                                <div class="name">[`Name`]</div>
+                                <div class="value">
+                                    <strong><i class="icon16" style="background-image: url('{$a.icon}');"></i>{$a.name}</strong><br>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="name">{if isset($a.controls.from.title)}{$a.controls.from.title}{else}[`Sender IDs`]{/if}</div>
+                                <div class="value">
+                                    {strip}
+                                        <textarea name="sms[{$i}][from]">
+                                            {if !empty($a.config.from)}{implode("\n", $a.config.from)}{/if}
+                                        </textarea>
+                                    {/strip}
+                                    <p class="hint">{if isset($a.controls.from.description)}{$a.controls.from.description}{else}[`Enter Sender IDs to use with this SMS gateway (Sender ID is either your phone number or up-to-11-characters text label). Enter * to use default Sender ID issued for your account by the gateway.`]{/if}</p>
+                                </div>
+                            </div>
+
+                            {foreach $a.controls as $k => $v}
+                                {if $k != 'from'}
+                                    <div class="field">
+                                        <div class="name">{$v.title}</div>
+                                        <div class="value">
+                                            {if ifset($v.control_type) == 'checkbox'}
+                                                <input type="hidden" name="sms[{$i}][{$k}]" value="">
+                                                <input type="checkbox" name="sms[{$i}][{$k}]" value="1" {if !empty($a.config[$k])}checked{/if}>
+                                            {else}
+                                                <input type="text" name="sms[{$i}][{$k}]" value="{if !empty($a.config[$k])}{$a.config[$k]|escape}{/if}">
+                                            {/if}
+                                            {if !empty($v.description)}
+                                                <p class="hint">{$v.description}</p>
+                                            {/if}
+                                        </div>
+                                    </div>
+                                {/if}
+                            {/foreach}
+
+                            <p class="small">
+                                {sprintf('[`Once gateway is setup, add new and edit existing SMS notifications using the <a href="%s">Notifications</a> settings screen.`]', '#/notifications/')}
+                                <br>
+                                {sprintf('[`<a href="%s" target="_blank">See documentation</a> for details.`]', '[`http://www.shop-script.com/help/1061/shop-script-5-sms-setup/`]')}
+                            </p>
+                        </div>
+
+                        <input name="sms[{$i}][adapter]" type="hidden" value="{$a.id}">
+                    {/foreach}
+                {else}
+                    <div class="value no-shift">
+                        <p>
+                            {sprintf('[`To enable SMS message sending, install and configure sending plugin for your preferred SMS gateway.<br /> <a href="%s">Browse for SMS gateway plugins</a> in Installer app.`]', $wa_backend_url|cat:'installer/#/plugins/wa-plugins/sms/')}
+                        </p>
+                    </div>
+                {/if}
+            </div>
+
+            <div class="apps-form-buttons">
+                <div class="apps-submit">
+                    <input class="button green" type="submit" name="" value="[`Save`]">
+                    <i class="icon16 loading apps-loading" style="display: none;"></i>
+                    <span class="apps-success-status" style="display: none;">
+                        [`Saved`] <i class="icon16 yes apps-yes-status"></i>
+                    </span>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        ( function($) {
+        })(jQuery);
+    </script>
+</div>

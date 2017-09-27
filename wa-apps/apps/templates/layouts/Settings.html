@@ -27,11 +27,11 @@
     {/wa_js}{strip}
 
     {* @event backend_assets.%plugin_id% *}
-    
+
     {foreach $backend_assets as $item}
         {$item}
     {/foreach}
-	
+
     <script>
         ( function($) {
             $.apps.title_pattern = "%s — {$wa->accountName()}";
@@ -58,13 +58,55 @@
             {* CONTENT *}
             <section class="a-content-wrapper">
                 <div class="a-content-block" id="a-content-block">
-                    {$content}
-                </div>
-            </section>
+
+                {$title = "[`Settings`]"}
+
+<div class="a-settings-page shadowed" id="a-settings-page">
+    <script>
+        ( function($) {
+            $.apps.title.set({$title|json_encode});
+        })(jQuery);
+    </script>
+
+    <div class="a-layout">
+        <div class="a-column sidebar left250px">
+
+            {$_menu = [
+                [
+                    "icon" => "settings",
+                    "name" => "[`General settings`]",
+                    "uri" => "`$wa_app_url`settings/"
+                ]
+            ]}
+
+            <aside class="a-settings-sidebar" id="a-settings-sidebar">
+                <ul class="menu-v stack with-icons" style="margin: 0;">
+                    {foreach $_menu as $_item}
+                        <li class="{$_item.li_class|default:''}">
+                            <a href="{$_item.uri}">
+                                {if !empty($_item.icon)}
+                                    <i class="icon16 {$_item.icon}"></i>
+                                {/if}
+                                {$_item.name}
+                            </a>
+                        </li>
+                    {/foreach}
+                </ul>
+            </aside>
+
+        </div>
+        <div class="a-column content bordered-left blank block double-padded">
+            {$content}
         </div>
     </div>
 </div>
 
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>
 <script>
 (function($) {
     $.apps.is_debug = {$is_debug},
