@@ -2,16 +2,9 @@
 
 class appsPluginsActions extends waPluginsActions
 {
-    //protected $plugins_hash = '#';
+    protected $plugins_hash = '#';
     protected $is_ajax = false;
     protected $shadowed = false;
-
-    public function preExecute()
-    {
-        if (!$this->getUser()->isAdmin('apps')) {
-            throw new waRightsException(_ws('Access denied'));
-        }
-    }
 
     public function defaultAction()
     {
@@ -21,9 +14,8 @@ class appsPluginsActions extends waPluginsActions
         $this->getResponse()->setTitle(_w('Plugin settings page'));
 
         if (!waRequest::isXMLHttpRequest()) {
-            //$this->setLayout(new appsDefaultLayout());
+            $this->setLayout(new appsDefaultLayout());
         }
-
         parent::defaultAction();
     }
 }

@@ -1,99 +1,58 @@
-/*global jQuery, location, $_*/
-(function ($) {
-    // js controller
-    $.wa.apps = {
-        page:null,
-        // init js controller
-        init: function (options) {
-            // if history exists
-            if (typeof($.History) != "undefined") {
-                $.History.bind(function (hash) {
-                    $.wa.apps.dispatch(hash);
-                });
+// MAIN APP CONTROLLER
+( function($) {
+    $.ajaxSetup({
+        cache: false
+    });
+
+    // Set up CSRF
+    $(document).ajaxSend(function(event, xhr, settings) {
+        if (settings.type != 'POST') {
+            return;
+        }
+        var matches = document.cookie.match(new RegExp("(?:^|; )_csrf=([^;]*)"));
+        var csrf = matches ? decodeURIComponent(matches[1]) : '';
+        if (!settings.data && settings.data !== 0) {
+            settings.data = '';
+        }
+        if (typeof(settings.data) === "string") {
+            if (settings.data.indexOf('_csrf=') == -1) {
+                settings.data += (settings.data.length > 0 ? '&' : '') + '_csrf=' + csrf;
+                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             }
-            if (options.page) {
-                this.page = options.page;
-            }
-            console.log(this.page);
-            this.dispatch();
-        },
-        // dispatch call method by hash
-        dispatch: function (hash) {
-            if (hash === undefined) {
-                hash = location.hash.replace(/^[^#]*#\/*/, '');
-            }
-            if (hash) {
-                // clear hash
-                hash = hash.replace(/^.*#/, '');
-                hash = hash.split('/');
-                if (hash[0]) {
-                    var actionName = "";
-                    var attrMarker = hash.length;
-                    for (var i = 0; i < hash.length; i++) {
-                        var h = hash[i];
-                        if (i < 2) {
-                            if (i === 0) {
-                                actionName = h;
-                            } else if (parseInt(h, 10) != h) {
-                                attrMarker = i;
-                                //actionName += h.substr(0,1).toUpperCase() + h.substr(1);
-                                break;
-                            } else {
-                                attrMarker = i;
-                                break;
-                            }
-                        } else {
-                            attrMarker = i;
-                            break;
-                        }
-                    }
-                    var attr = hash.slice(attrMarker);
-                    // call action if it exists
-                    if (this[actionName + 'Action']) {
-                        this.currentAction = actionName;
-                        this.currentActionAttr = attr;
-                        this[actionName + 'Action'](attr);
-                    } else {
-                        if (console) {
-                            console.log('Invalid action name:', actionName+'Action');
-                        }
-                    }
+        } else if (typeof(settings.data) === "object") {
+            if (window.FormData && settings.data instanceof window.FormData) {
+                if ('function' == typeof settings.data.set) {
+                    settings.data.set('_csrf', csrf);
                 } else {
-                    // call default action
-                    this.defaultAction();
+                    settings.data.append('_csrf', csrf);
                 }
             } else {
-                // call default action
-                this.defaultAction();
+                settings.data['_csrf'] = csrf;
             }
-        },
-        defaultAction: function () {
-            if (this.page=='plugins') {
-                this.pluginsAction();
-            }
-        },
-        pluginsAction: function (id) {
-            var path = '?module=plugins';
-            if (id & id!="") {
-
-                console.log(id);
-                path += '&action=settings&id=' + id;
-            }
-            $("#content").load(path);
-            // $.layout.init({
-            // debug: true,
-            // default_query:{"plugins":"apps"}
-            // });
-        },
-
-        generalAction: function () {
-            $("#content").load('?module=settings');
-        },
-    };
-    $.storage = new $.store();
-
-    $(document).on('click','.menu-v.with-icons>li', function (e) {
-        $('.selected','.menu-v.with-icons').removeClass('selected');
-        $(this).addClass('selected');
+        }
     });
+
+    $.apps = $.extend($.apps || {}, {
+        lang: false,
+        app_url: false,
+        backend_url: false,
+        is_debug: false,
+        content: false,
+        sidebar: false,
+        storage: new $.store(),
+        title: {
+            pattern: "Apps — %s",
+            set: function( title_string ) {
+                if (title_string) {
+                    var state = history.state;
+                    if (state) {
+                        state.title = title_string;
+                    }
+                    document.title = $.apps.title.pattern.replace("%s", title_string);
+                }
+            }
+        },
+
+	});
+
 })(jQuery);
