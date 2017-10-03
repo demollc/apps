@@ -10,7 +10,7 @@ class appsBackendActions extends waViewActions
 
     public function defaultAction()
     {
-        $message = 'Hello world!';
+        $message = _w('App to unite all events from other apps for plugins.');
         $this->view->assign('message', $message);
     }
 }

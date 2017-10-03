@@ -113,39 +113,51 @@ return array(
               ),
           'frontend_error' => array(
               'params' => true,
+              'frontend' => true,
               ),
           'frontend_footer' => array(
               'params' => true,
+              'frontend' => true,
               ),
           'frontend_head' => array(
               'params' => true,
+              'frontend' => true,
               ),
           'frontend_header' => array(
               'params' => true,
+              'frontend' => true,
               ),
           'frontend_homepage' => array(
               'params' => true,
+              'frontend' => true,
               ),
           'frontend_my' => array(
               'params' => false,
+              'frontend' => true,
               ),
           'frontend_my_affiliate' => array(
               'params' => false,
+              'frontend' => true,
               ),
           'frontend_my_nav' => array(
               'params' => false,
+              'frontend' => true,
               ),
           'frontend_my_order' => array(
               'params' => true,
+              'frontend' => true,
               ),
           'frontend_my_orders' => array(
               'params' => true,
+              'frontend' => true,
               ),
           'frontend_nav' => array(
               'params' => false,
+              'frontend' => true,
               ),
           'frontend_nav_aux' => array(
               'params' => false,
+              'frontend' => true,
               ),
           'frontend_product' => array(
               'params' => true,
@@ -153,6 +165,7 @@ return array(
               ),
           'frontend_search' => array(
               'params' => false,
+              'frontend' => true,
               ),
           'image_thumb' => array(
               'params' => true,

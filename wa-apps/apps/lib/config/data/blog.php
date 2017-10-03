@@ -76,19 +76,27 @@ return array(
           'frontend_action_default' => array(
               'params' => true,
               'array_keys' => array('nav_before', 'footer', 'head', 'sidebar'),
+              'frontend' => true,
               ),
           'frontend_action_error' => array(
               'params' => true,
+              'array_keys' => array('nav_before', 'footer', 'head', 'sidebar'),
+              'frontend' => true,
               ),
           'frontend_action_page' => array(
               'params' => true,
+              'array_keys' => array('nav_before', 'footer', 'head', 'sidebar'),
+              'frontend' => true,
               ),
           'frontend_action_post' => array(
               'params' => true,
+              'array_keys' => array('nav_before', 'footer', 'head', 'sidebar'),
+              'frontend' => true,
               ),
           'frontend_post' => array(
               'params' => true,
               'array_keys' => array('footer'),
+              'frontend' => true,
               ),
           'post_delete' => array(
               'params' => true,

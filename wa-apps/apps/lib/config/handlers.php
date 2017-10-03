@@ -1,5 +1,5 @@
 <?php
-
+//Temporary file for generating hooks
 return array(
     // blog v. 1.3.3.42413
     'blog' => array (
