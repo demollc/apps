@@ -3,7 +3,7 @@
 return array(
     'id' => 'team',
     'hooks' => array (
-          'backend_assets'  => array(
+        'backend_assets'  => array(
               'params' => false,
               ),
         'backend_schedule_settings'  => array(

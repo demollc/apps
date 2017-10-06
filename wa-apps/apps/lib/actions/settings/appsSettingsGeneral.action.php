@@ -1,9 +1,9 @@
 <?php
 class appsSettingsGeneralAction extends waViewAction
 {
-   public function preExecute()
+    public function preExecute()
     {
-        if(!waRequest::isXMLHttpRequest()){
+        if (!waRequest::isXMLHttpRequest()) {
             $this->setLayout(new appsSettingsLayout());
         }
     }

@@ -1,40 +1,39 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: apps\n"
-"POT-Creation-Date: 2017-06-17 14:08+0000\n"
-"PO-Revision-Date: \n"
-"Last-Translator:  apps\n"
-"Language-Team:  apps\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-    "Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
-"X-Poedit-Language: ru_RU\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: .\n"
 
-#: /wa-apps/apps/templates/actions/backend/Backend.html:21
-msgid "Hello world"
-msgstr ""
+#: /wa-apps/apps/templates/actions/backend/BackendDefault.html:4
+msgid "Apps"
+msgstr "Дополнения"
 
-#: /wa-apps/apps/templates/actions/backend/Backend.html:26
-msgid "Navigation"
-msgstr ""
+#: /wa-apps/apps/templates/actions/Sidebar.html:10
+msgid "Main"
+msgstr "Главная"
 
-#: /wa-apps/apps/templates/actions/backend/Backend.html:29
-msgid "Menu item 1"
-msgstr ""
+#: /wa-apps/apps/templates/actions/Sidebar.html:31
+msgid "Plugins"
+msgstr "Плагины"
 
-#: /wa-apps/apps/templates/actions/backend/Backend.html:32
-msgid "Menu item 2"
-msgstr ""
+#: /wa-apps/apps/templates/actions/Sidebar.html:35
+#: /wa-apps/apps/templates/layouts/Settings.html:62
+msgid "Settings"
+msgstr "Настройки"
 
-#: /wa-apps/apps/templates/actions/backend/Backend.html:35
-msgid "Menu item 3"
-msgstr ""
+#: /wa-apps/apps/templates/actions/settings/SettingsGeneral.html:3
+#: /wa-apps/apps/templates/layouts/Settings.html:77
+msgid "General settings"
+msgstr "Общие настройки"
 
-#: /wa-apps/apps/templates/actions/backend/Backend.html:44
-msgid "Woohoo, Webasyst app is ready!"
-msgstr ""
+#: /wa-apps/apps/lib/actions/backend/appsBackend.actions.php:13
+msgid "App to unite all events from other apps for common plugins."
+msgstr "Приложение, объединяющее все события других приложений, для создания общих плагинов."
+
+#: /wa-apps/apps/lib/actions/plugins/appsPlugins.actions.php:12
+msgid "Access denied"
+msgstr "Доступ запрещен"
+
+#: /wa-apps/apps/lib/actions/plugins/appsPlugins.actions.php:14
+msgid "Plugin settings page"
+msgstr "Страница настроек плагина"

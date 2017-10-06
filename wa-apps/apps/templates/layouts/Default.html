@@ -5,7 +5,6 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>{$wa->accountName()} &mdash; {$wa->appName()}</title>
-
     {* CSS *}
     <link rel="stylesheet" href="{$wa_url}wa-content/css/jquery-ui/base/jquery.ui.all.css?{$wa->version(true)}">
     <link rel="stylesheet" href="{$wa_url}wa-content/js/farbtastic/farbtastic.css?{$wa->version(true)}">
@@ -25,13 +24,10 @@
     {/wa_js}{wa_js file="js/compiled/apps.min.js"}
         {$wa_app_static_url}js/apps.js
     {/wa_js}{strip}
-
     {* @event backend_assets.%plugin_id% *}
-    
     {foreach $backend_assets as $item}
         {$item}
     {/foreach}
-	
     <script>
         ( function($) {
             $.apps.title_pattern = "%s — {$wa->accountName()}";
@@ -39,22 +35,18 @@
     </script>
 </head>
 <body>
-
 <div id="wa">
     {* HEADER *}
     {$wa->header()}
-
     {*APP*}
     <div id="wa-app">
         <div class="a-main-wrapper" id="a-main-wrapper">
-
             {* SIDEBAR *}
             {if empty($hide_sidebar)}
                 <section class="a-sidebar-wrapper sidebar left200px" id="a-sidebar-wrapper">
                     {$sidebar}
                 </section>
             {/if}
-
             {* CONTENT *}
             <section class="a-content-wrapper">
                 <div class="a-content-block" id="a-content-block">
@@ -64,15 +56,12 @@
         </div>
     </div>
 </div>
-
 <script>
 (function($) {
     $.apps.is_debug = {$is_debug},
     $.apps.app_url = {$wa_app_url|json_encode};
 })(jQuery);
 </script>
-
 </body>
 </html>
-
 {/strip}

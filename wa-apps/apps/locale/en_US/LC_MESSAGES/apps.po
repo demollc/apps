@@ -4,29 +4,36 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /wa-apps/apps/templates/actions/backend/Backend.html:21
-msgid "Hello world"
-msgstr "12"
+#: /wa-apps/apps/templates/actions/backend/BackendDefault.html:4
+msgid "Apps"
+msgstr "Additions"
 
-#: /wa-apps/apps/templates/actions/backend/Backend.html:26
-msgid "Navigation"
-msgstr "312"
-
-#: /wa-apps/apps/templates/actions/backend/Backend.html:29
-msgid "Menu item 1"
-msgstr "Cest \" ' ' \""
-
-#: /wa-apps/apps/templates/actions/backend/Backend.html:32
-msgid "Menu item 2"
-msgstr "ghj"
-
-#: /wa-apps/apps/templates/actions/backend/Backend.html:35
-msgid "Menu item 3"
+#: /wa-apps/apps/templates/actions/Sidebar.html:10
+msgid "Main"
 msgstr ""
 
-#: /wa-apps/apps/templates/actions/backend/Backend.html:44
-msgid "Woohoo, Webasyst app is ready!"
-msgid_plural "Woohoo, Webasyst app is ready2!"
-msgstr[0] "0"
-msgstr[2] "0"
-msgstr[3] "1"
+#: /wa-apps/apps/templates/actions/Sidebar.html:31
+msgid "Plugins"
+msgstr ""
+
+#: /wa-apps/apps/templates/actions/Sidebar.html:35
+#: /wa-apps/apps/templates/layouts/Settings.html:62
+msgid "Settings"
+msgstr ""
+
+#: /wa-apps/apps/templates/actions/settings/SettingsGeneral.html:3
+#: /wa-apps/apps/templates/layouts/Settings.html:77
+msgid "General settings"
+msgstr ""
+
+#: /wa-apps/apps/lib/actions/backend/appsBackend.actions.php:13
+msgid "App to unite all events from other apps for common plugins."
+msgstr ""
+
+#: /wa-apps/apps/lib/actions/plugins/appsPlugins.actions.php:12
+msgid "Access denied"
+msgstr ""
+
+#: /wa-apps/apps/lib/actions/plugins/appsPlugins.actions.php:14
+msgid "Plugin settings page"
+msgstr ""

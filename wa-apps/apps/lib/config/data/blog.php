@@ -122,7 +122,7 @@ return array(
           'post_shedule' => array(
               'params' => true,
               ),
-         'post_validate' => array(
+          'post_validate' => array(
               'params' => true,
               ),
           'prepare_blogs_frontend' => array(

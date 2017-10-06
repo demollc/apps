@@ -6,37 +6,37 @@ return array(
           'backend_assets'  => array(
               'params' => false,
               ),
-        'pbx_numbers_assigned'  => array(
+          'pbx_numbers_assigned'  => array(
               'params' => true,
               ),
-        'invoice_info'  => array(
+          'invoice_info'  => array(
               'params' => true,
               ),
-        'invoice_actions'  => array(
+          'invoice_actions'  => array(
               'params' => true,
               ),
-        'invoice_payment'  => array(
+          'invoice_payment'  => array(
               'params' => true,
               ),
-        'invoice_activate'  => array(
+          'invoice_activate'  => array(
               'params' => true,
               ),
-        'backend_notification_save'  => array(
+          'backend_notification_save'  => array(
               'params' => true,
               ),
-        'search.config'  => array(
+          'search.config'  => array(
               'params' => true,
               ),
-        'start_notification_birthday_worker'  => array(
+          'start_notification_birthday_worker'  => array(
               'params' => true,
               ),
-        'start_source_email_worker'  => array(
+          'start_source_email_worker'  => array(
               'params' => true,
               ),
-        'invoice_refund'  => array(
+          'invoice_refund'  => array(
               'params' => true,
               ),
-        'invoice_paid'  => array(
+          'invoice_paid'  => array(
               'params' => true,
               ),
         ),

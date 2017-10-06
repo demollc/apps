@@ -6,10 +6,10 @@ return array(
           'backend_dispatch_miss'  => array(
               'params' => true,
               ),
-         'backend_header' => array(
+          'backend_header' => array(
               'params' => false,
               ),
-        'backend_personal_profile' => array(
+          'backend_personal_profile' => array(
               'params' => true,
               ),
           'backend_page_edit'  => array(

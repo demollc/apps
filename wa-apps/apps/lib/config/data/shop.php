@@ -48,7 +48,7 @@ return array(
           'backend_reports_channels' => array(
               'params' => true,
               ),
-           'backend_set_dialog' => array(
+          'backend_set_dialog' => array(
               'params' => true,
               ),
           'backend_settings_affiliate' => array(
@@ -200,7 +200,7 @@ return array(
           'order_action.ship' => array(
               'params' => true,
               ),
-         'order_action_form.callback' => array(
+          'order_action_form.callback' => array(
               'params' => true,
               ),
           'order_action_form.comment' => array(
@@ -224,7 +224,7 @@ return array(
           'order_action_form.ship' => array(
               'params' => true,
               ),
-         'order_calculate_discount' => array(
+          'order_calculate_discount' => array(
               'params' => true,
               ),
           'orders_collection.filter' => array(

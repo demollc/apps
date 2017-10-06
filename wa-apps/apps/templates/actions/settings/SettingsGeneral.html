@@ -1,49 +1,4 @@
 <div class="apps-generate-settings-page" id="apps-generate-settings-page">
     {* HEADER *}
     <h1 class="a-page-header">[`General settings`]</h1>
-
-    <div class="apps-general-settings-fields-block">
-        <form action="?module=settings&action=generalSave">
-            <div class="fields">
-                <div class="field-group">
-                    <div class="field">
-                        <div class="name">[`Contact name edit form`]</div>
-                        <div class="value no-shift"><label>
-                            <input type="radio" name="settings[one_name_field]" value="1"{if !empty($settings.one_name_field)} checked{/if}>
-                            [`One field for contact name`]
-                        </label></div>
-                        <div class="value no-shift"><label>
-                            <input type="radio" name="settings[one_name_field]" value=""{if empty($settings.one_name_field)} checked{/if}>
-                            [`Separate fields for name parts`]
-                        </label></div>
-                    </div>
-                </div>
-
-                <div class="field-group">
-                    <div class="field">
-                        <div class="name">[`Contact name format`]</div>
-                        <div class="value no-shift"><label>
-                            <input type="radio" name="settings[name_order]" value="lfm"{if ifempty($settings.name_order) == 'lfm'} checked{/if}>
-                            [`Lastname`] [`Firstname`] [`Middlename`]
-                        </label></div>
-                        <div class="value no-shift"><label>
-                            <input type="radio" name="settings[name_order]" value="fml"{if ifempty($settings.name_order) == 'fml'} checked{/if}>
-                            [`Firstname`] [`Middlename`] [`Lastname`]
-                        </label></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="apps-form-buttons {if count($settings) > 5}apps-sticky{/if}">
-                <div class="apps-submit a-footer-actions js-footer-actions">
-                    <input class="button green js-submit-button" type="submit" name="" value="[`Save`]">
-                    <span class="a-hidden">
-                        <span style="margin: 0 4px;">[`or`]</span>
-                        <a href="{$wa_app_url}settings/">[`cancel`]</a>
-                    </span>
-                    <i class="icon16 loading apps-loading" style="display: none;"></i>
-                </div>
-            </div>
-        </form>
-    </div>
 </div>
