@@ -8,6 +8,7 @@
 - shop.cart_add
 
 Все эти хуки можно использовать в одном плагине для приложения.
+Полный список по приложениям в папке https://github.com/Alexkurd/apps/tree/master/lib/config/data
 
 # Интеграция с шаблонами
 {$wa->apps->debug(1)} Вызывает метод appsDebugPluginViewHelper->execute($params) плагина Debug.
