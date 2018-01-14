@@ -24,9 +24,6 @@ return array(
           'campaign.resume' => array(
               'params' => true,
               ),
-          'campaign.before_sending' => array(
-              'params' => false,
-              ),
           'campaign.validate_test' => array(
               'params' => true,
               ),
