@@ -1,10 +1,15 @@
 <?php
-
 class appsHelpdeskRequests_deleteHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('helpdesk.requests_delete', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'helpdesk',
+            'hook' => 'requests_delete',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

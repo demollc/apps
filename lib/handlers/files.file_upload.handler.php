@@ -1,10 +1,15 @@
 <?php
-
 class appsFilesFile_uploadHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('files.file_upload', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'files',
+            'hook' => 'file_upload',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

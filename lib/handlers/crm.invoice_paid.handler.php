@@ -1,10 +1,15 @@
 <?php
-
 class appsCrmInvoice_paidHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('crm.invoice_paid', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'crm',
+            'hook' => 'invoice_paid',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

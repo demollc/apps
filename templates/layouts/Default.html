@@ -61,7 +61,26 @@
 (function($) {
     $.apps.is_debug = {$is_debug},
     $.apps.app_url = {$wa_app_url|json_encode};
+{*
+    $.plugins.helper.getContentUrl = function ($item, path) {
+        var url = '';
+        if ($item.data('url')) {
+            url = $item.data('url');
+        } else if ($item.data('settings')) {
+            url = '?plugin=' + path.plugin + '&module=settings';
+            if (path.plugin != path.tail) url = url + "&id="+path.tail;
+        } else if (path.plugin) {
+            url = '?module=plugins&action=settings&id=' + path.plugin;
+        }
+        return url;
+    },
+
+    $(window).bind('hashchange', function() {
+        $.plugins.dispatch(location.hash, true);
+    });
+*}
 })(jQuery);
+
 </script>
 </body>
 </html>

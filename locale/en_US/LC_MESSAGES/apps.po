@@ -6,7 +6,7 @@ msgstr ""
 
 #: /wa-apps/apps/templates/actions/backend/BackendDefault.html:4
 msgid "Apps"
-msgstr "Additions"
+msgstr "Additions "
 
 #: /wa-apps/apps/templates/actions/Sidebar.html:10
 msgid "Main"
@@ -37,3 +37,7 @@ msgstr ""
 #: /wa-apps/apps/lib/actions/plugins/appsPlugins.actions.php:14
 msgid "Plugin settings page"
 msgstr ""
+
+#: /wa-apps/apps/lib/actions/plugins/appsPlugins.actions.php:14
+msgid "Test"
+msgstr "Проверка сложного текста \" и '"

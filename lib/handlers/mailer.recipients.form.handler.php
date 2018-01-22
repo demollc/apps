@@ -1,10 +1,15 @@
 <?php
-
 class appsMailerRecipientsformHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('mailer.recipients.form', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'mailer',
+            'hook' => 'recipients.form',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }
