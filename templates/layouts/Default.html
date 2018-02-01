@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>{$wa->accountName()} &mdash; {$wa->appName()}</title>
+    <title>{$wa->title()|escape}</title>
     {* CSS *}
     <link rel="stylesheet" href="{$wa_url}wa-content/css/jquery-ui/base/jquery.ui.all.css?{$wa->version(true)}">
     <link rel="stylesheet" href="{$wa_url}wa-content/js/farbtastic/farbtastic.css?{$wa->version(true)}">
