@@ -10,6 +10,6 @@ class appsBlogSearch_posts_backendHandler extends waEventHandler
             'params' => $params
         );
         $event = wao(new appsEvent())->call($hook);
-        return $event;
+        if ($event) return $event;
     }
 }

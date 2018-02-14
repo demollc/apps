@@ -78,7 +78,7 @@ return array(
           'category_save' => array(
               'params' => true,
               ),
-          'contacts_delete' => array(
+          'contacs_delete' => array(
               'params' => true,
               ),
           'currency_delete' => array(
