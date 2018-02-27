@@ -8,7 +8,12 @@ return array (
     24 => 'img/apps24.png',
     16 => 'img/apps16.png',
   ),
-  'version' => '1.0',
+  'version' => '1.1',
   'vendor' => '991739',
   'plugins' => true,
+  'frontend' => true,
+  'rights' => true,
+  'routing_params' => array(
+        'private' => true,
+    ),
 );

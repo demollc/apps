@@ -1,10 +1,15 @@
 <?php
-
 class appsPhotosFrontend_collectionHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('photos.frontend_collection', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'photos',
+            'hook' => 'frontend_collection',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

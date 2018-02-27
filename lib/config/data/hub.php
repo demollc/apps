@@ -6,64 +6,87 @@ return array(
     //hub 1.1.2 14
           'backend' => array(
               'params' => false,
+              'void' => false,
               ),
           'frontend_author' => array(
               'params' => true,
+              'void' => false,
               ),
           'frontend_category' => array(
               'params' => true,
+              'void' => false,
               ),
+            'frontend_comments' => array(
+                'params' => false,
+                'void' => true,
+                ),
           'frontend_error' => array(
               'params' => true,
+              'void' => true,
               ),
           'frontend_footer' => array(
               'params' => false,
+              'void' => false,
               ),
           'frontend_head' => array(
               'params' => false,
+              'void' => false,
               ),
           'frontend_header' => array(
               'params' => false,
+              'void' => false,
               ),
           'frontend_homepage' => array(
               'params' => false,
+              'void' => false,
               ),
           'frontend_nav' => array(
               'params' => false,
+              'void' => false,
               ),
           'frontend_search' => array(
               'params' => false,
+              'void' => false,
               ),
           'frontend_tag' => array(
               'params' => true,
+              'void' => false,
               ),
           'frontend_topic_add' => array(
               'params' => true,
               'array_keys' => array('top_block', 'bottom_block'),
+              'void' => false,
               ),
           'frontend_topic_edit' => array(
               'params' => true,
               'array_keys' => array('top_block', 'bottom_block'),
+              'void' => false,
               ),
           'frontend_topic' => array(
               'params' => true,
               'array_keys' => array('title_suffix', 'body', 'comments'),
+              'void' => false,
               ),
           'backend_pages_sidebar' => array(
               'params' => true,
+              'void' => false,
               ),
           'backend_page_edit' => array(
               'params' => true,
               'array_keys' => array('action_button_li', 'section', 'settings_section'),
+              'void' => false,
               ),
           'page_save' => array(
               'params' => true,
+              'void' => true,
               ),
           'page_edit' => array(
               'params' => true,
+              'void' => false,
               ),
           'page_delete' => array(
               'params' => true,
+              'void' => true,
               ),
         ),
     );

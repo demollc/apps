@@ -1,10 +1,15 @@
 <?php
-
 class appsCrmBackend_notification_saveHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('crm.backend_notification_save', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'crm',
+            'hook' => 'backend_notification_save',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

@@ -1,10 +1,15 @@
 <?php
-
 class appsShopFrontend_cartHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('shop.frontend_cart', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'shop',
+            'hook' => 'frontend_cart',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

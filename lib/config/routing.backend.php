@@ -7,5 +7,6 @@ return array(
     'settings/sms/?'    => 'settings/sms',
     'settings/'         => 'settings/general',
     'plugins/?'         => 'plugins/',
+    'plugins/<plugin_id>/*' => 'plugins/',
     ''                  => 'backend/',
 );

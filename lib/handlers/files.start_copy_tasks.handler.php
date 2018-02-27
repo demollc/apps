@@ -1,10 +1,15 @@
 <?php
-
 class appsFilesStart_copy_tasksHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('files.start_copy_tasks', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'files',
+            'hook' => 'start_copy_tasks',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

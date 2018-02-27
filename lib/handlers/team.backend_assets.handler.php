@@ -1,10 +1,15 @@
 <?php
-
 class appsTeamBackend_assetsHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('team.backend_assets', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'team',
+            'hook' => 'backend_assets',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

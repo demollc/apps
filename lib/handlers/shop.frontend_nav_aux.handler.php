@@ -1,10 +1,15 @@
 <?php
-
 class appsShopFrontend_nav_auxHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('shop.frontend_nav_aux', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'shop',
+            'hook' => 'frontend_nav_aux',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

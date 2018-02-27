@@ -271,6 +271,7 @@ return array(
               ),
           'signup' => array(
               'params' => true,
+              'void' => true,
               ),
           'sitemap' => array(
               'params' => true,
@@ -305,6 +306,7 @@ return array(
           //pages
           'backend_pages_sidebar' => array(
               'params' => true,
+              'void' => false,
               ),
           'backend_page_edit' => array(
               'params' => true,
@@ -312,12 +314,15 @@ return array(
               ),
           'page_save' => array(
               'params' => true,
+              'void' => true,
               ),
           'page_edit' => array(
               'params' => true,
+              'void' => false,
               ),
           'page_delete' => array(
               'params' => true,
+              'void' => true,
               ),
         )
     );

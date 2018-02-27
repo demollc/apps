@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>{$wa->accountName()} &mdash; {$wa->appName()}</title>
+    <title>{$wa->title()|escape}</title>
     {* CSS *}
     <link rel="stylesheet" href="{$wa_url}wa-content/css/jquery-ui/base/jquery.ui.all.css?{$wa->version(true)}">
     <link rel="stylesheet" href="{$wa_url}wa-content/js/farbtastic/farbtastic.css?{$wa->version(true)}">
@@ -61,7 +61,26 @@
 (function($) {
     $.apps.is_debug = {$is_debug},
     $.apps.app_url = {$wa_app_url|json_encode};
+{*
+    $.plugins.helper.getContentUrl = function ($item, path) {
+        var url = '';
+        if ($item.data('url')) {
+            url = $item.data('url');
+        } else if ($item.data('settings')) {
+            url = '?plugin=' + path.plugin + '&module=settings';
+            if (path.plugin != path.tail) url = url + "&id="+path.tail;
+        } else if (path.plugin) {
+            url = '?module=plugins&action=settings&id=' + path.plugin;
+        }
+        return url;
+    },
+
+    $(window).bind('hashchange', function() {
+        $.plugins.dispatch(location.hash, true);
+    });
+*}
 })(jQuery);
+
 </script>
 </body>
 </html>

@@ -1,10 +1,15 @@
 <?php
-
 class appsMailerSendertypesHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('mailer.sender.types', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'mailer',
+            'hook' => 'sender.types',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }
