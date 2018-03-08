@@ -8,6 +8,7 @@ class appsRightConfig extends waRightConfig
      * @param waRightConfig $this Rights setup object
      * @return void
      */
+        $this->addItem('plugins', _w('Can manage plugins'));
         wa()->event('rights.config', $this);
     }
 }
