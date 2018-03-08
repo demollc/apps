@@ -24,6 +24,7 @@
             {foreach $backend_sidebar as $_}{ifset($_.bottom_li)}{/foreach}
         </ul>
     </div>
+    {if $_is_admin}
     <div class="hr"></div>
     <div class="block">
         <ul class="menu-v with-icons">
@@ -37,5 +38,6 @@
             *}
         </ul>
     </div>
+    {/if}
 </div>
 {/strip}
