@@ -12,6 +12,7 @@ return array (
   'vendor' => '991739',
   'plugins' => true,
   'frontend' => true,
+  'rights' => true,
   'routing_params' => array(
         'private' => true,
     ),
