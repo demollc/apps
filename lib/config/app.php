@@ -8,7 +8,7 @@ return array (
     24 => 'img/apps24.png',
     16 => 'img/apps16.png',
   ),
-  'version' => '1.1',
+  'version' => '1.2',
   'vendor' => '991739',
   'plugins' => true,
   'frontend' => true,

@@ -33,6 +33,6 @@ class appsEvent
                 }
             }
         }
-        return ifempty($result, false);
+        return ifempty($result, null);
     }
 }
