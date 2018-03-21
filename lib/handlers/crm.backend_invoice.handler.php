@@ -2,7 +2,7 @@
 class appsCrmBackend_invoiceHandler extends waEventHandler
 
 {
-    public function execute(&$params = null, $array_keys = array("title_suffix", "action_button", "action_link", "info_section"))
+    public function execute(&$params = null, $array_keys = null)
     {
         $hook = array(
             'app' => 'crm',

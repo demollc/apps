@@ -1,5 +1,5 @@
 <?php
-class appsCrmRightsConfigHandler extends waEventHandler
+class appsCrmRightsconfigHandler extends waEventHandler
 
 {
     public function execute(&$params = null, $array_keys = null)

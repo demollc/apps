@@ -1,12 +1,12 @@
 <?php
-class appsCrmInvoice_activateHandler extends waEventHandler
+class appsCrmBackend_profile_logHandler extends waEventHandler
 
 {
     public function execute(&$params = null, $array_keys = null)
     {
         $hook = array(
             'app' => 'crm',
-            'hook' => 'invoice_activate',
+            'hook' => 'backend_profile_log',
             'params' => $params
         );
         $event = wao(new appsEvent())->call($hook);
