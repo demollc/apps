@@ -21,9 +21,10 @@ class appsEvent
         } else {
             $event = wa('apps')->event($params['app'].'.'.$params['hook'], $params['params']);
         }
+        array_filter($event);
         $result = array();
         foreach($event as $ev) {
-            if ($ev) {
+            if ($ev && is_array($ev)) {
                 foreach ((array)$ev as $key => $handler) {
                     if (array_key_exists($key, $result)) {
                         $result[$key] .= $handler;
@@ -31,6 +32,11 @@ class appsEvent
                         $result[$key] = $handler;
                     }
                 }
+            } else {
+                if (is_array($result) && empty($result)) {
+                    $result = implode('', $result);
+                }
+                $result .= $ev;
             }
         }
         return ifempty($result, null);
