@@ -1,10 +1,15 @@
 <?php
-
 class appsPhotosBackend_sidebarHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('photos.backend_sidebar', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'photos',
+            'hook' => 'backend_sidebar',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

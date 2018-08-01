@@ -1,10 +1,15 @@
 <?php
-
 class appsBlogBackend_streamHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = array("menu"))
     {
-        $event = wa('apps')->event('blog.backend_stream', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'blog',
+            'hook' => 'backend_stream',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

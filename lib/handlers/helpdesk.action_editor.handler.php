@@ -1,10 +1,15 @@
 <?php
-
 class appsHelpdeskAction_editorHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('helpdesk.action_editor', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'helpdesk',
+            'hook' => 'action_editor',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

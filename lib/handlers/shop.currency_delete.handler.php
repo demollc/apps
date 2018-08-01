@@ -1,10 +1,15 @@
 <?php
-
 class appsShopCurrency_deleteHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('shop.currency_delete', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'shop',
+            'hook' => 'currency_delete',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }

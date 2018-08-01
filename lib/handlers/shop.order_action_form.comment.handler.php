@@ -1,10 +1,15 @@
 <?php
-
 class appsShopOrder_action_formcommentHandler extends waEventHandler
+
 {
     public function execute(&$params = null, $array_keys = null)
     {
-        $event = wa('apps')->event('shop.order_action_form.comment', $params, $array_keys);
-        return ifempty($event);
+        $hook = array(
+            'app' => 'shop',
+            'hook' => 'order_action_form.comment',
+            'params' => $params
+        );
+        $event = wao(new appsEvent())->call($hook);
+        return $event;
     }
 }
