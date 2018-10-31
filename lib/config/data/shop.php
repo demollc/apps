@@ -1,6 +1,6 @@
 <?php
 return array(
-    'id' => 'shop', //7.4.1.231
+    'id' => 'shop', //8.0.0
     'hooks' => array(
         'backend_category_dialog' => array(
             'params' => true
@@ -39,6 +39,9 @@ return array(
             )
         ),
         'backend_order_edit' => array(
+            'params' => true
+        ),
+        'backend_order_print' => array(
             'params' => true
         ),
         'backend_orders' => array(
@@ -90,6 +93,18 @@ return array(
         'backend_settings_stocks' => array(
             'params' => true
         ),
+        'backend_stocks.stocks' => array(
+            'params' => true
+        ),
+        'backend_stocks.transfer' => array(
+            'params' => true
+        ),
+        'backend_stocks.transfer_info' => array(
+            'params' => true
+        ),
+        'backend_stocks.transfer_list' => array(
+            'params' => true
+        ),
         'backend_tutorial' => array(
             'params' => false
         ),
@@ -105,10 +120,16 @@ return array(
         'cart_delete' => array(
             'params' => true
         ),
+        'cart_update' => array(
+            'params' => true
+        ),
         'category_delete' => array(
             'params' => true
         ),
         'category_save' => array(
+            'params' => true
+        ),
+        'category_update' => array(
             'params' => true
         ),
         'contacts_change' => array(
@@ -124,6 +145,9 @@ return array(
             'params' => true
         ),
         'currency_primary' => array(
+            'params' => true
+        ),
+        'currency_change' => array(
             'params' => true
         ),
         'customers_collection' => array(
@@ -151,6 +175,9 @@ return array(
             'params' => true
         ),
         'frontend_checkout_stock_rules' => array(
+            'params' => true
+        ),
+        'frontend_compare' => array(
             'params' => true
         ),
         'frontend_error' => array(
@@ -213,9 +240,18 @@ return array(
         'frontend_products' => array(
             'params' => true
         ),
+        'frontend_review_add.after' => array(
+            'params' => true
+        ),
+        'frontend_review_add.before' => array(
+            'params' => true
+        ),
         'frontend_search' => array(
             'params' => false,
             'frontend' => true
+        ),
+        'image_generate_thumb' => array(
+            'params' => true
         ),
         'image_thumb' => array(
             'params' => true
@@ -283,6 +319,9 @@ return array(
         'orders_collection.filter' => array(
             'params' => true
         ),
+        'orders_collection.prepared' => array(
+            'params' => true
+        ),
         'page_delete' => array(
             'params' => true,
             'void' => true
@@ -295,6 +334,24 @@ return array(
             'params' => true,
             'void' => true
         ),
+        'products_add_sets.after' => array(
+            'params' => true
+        ),
+        'products_add_sets.before' => array(
+            'params' => true
+        ),
+        'product_badge_delete.after' => array(
+            'params' => true
+        ),
+        'product_badge_delete.before' => array(
+            'params' => true
+        ),
+        'product_badge_set.after' => array(
+            'params' => true
+        ),
+        'product_badge_set.before' => array(
+            'params' => true
+        ),
         'product_custom_fields' => array(
             'params' => false
         ),
@@ -304,10 +361,16 @@ return array(
         'product_duplicate' => array(
             'params' => true
         ),
+        'product_images_delete' => array(
+            'params' => true
+        ),
         'product_mass_update' => array(
             'params' => true
         ),
         'product_presave' => array(
+            'params' => true
+        ),
+        'products_reviews' => array(
             'params' => true
         ),
         'product_save' => array(
@@ -316,7 +379,31 @@ return array(
         'product_sku_delete' => array(
             'params' => true
         ),
+        'products_set_categories.after' => array(
+            'params' => true
+        ),
+        'products_set_categories.before' => array(
+            'params' => true
+        ),
+        'products_tags_set.after' => array(
+            'params' => true
+        ),
+        'products_tags_set.before' => array(
+            'params' => true
+        ),
+        'products_types_set.after' => array(
+            'params' => true
+        ),
+        'products_types_set.before' => array(
+            'params' => true
+        ),
         'products_collection' => array(
+            'params' => true
+        ),
+        'products_visibility_set.after' => array(
+            'params' => true
+        ),
+        'products_visibility_set.before' => array(
             'params' => true
         ),
         'reset' => array(
@@ -337,6 +424,9 @@ return array(
         'set_save' => array(
             'params' => true
         ),
+        'shipping_package' => array(
+            'params' => true
+        ),
         'signup' => array(
             'params' => true,
             'void' => false
@@ -344,7 +434,37 @@ return array(
         'sitemap' => array(
             'params' => true
         ),
+        'start_followup_cli' => array(
+            'params' => true,
+             'array_keys' => array(
+                0 => 'followups'
+            )
+        ),
         'update.route' => array(
+            'params' => true
+        ),
+        'view_categories' => array(
+            'params' => true
+        ),
+        'view_features' => array(
+            'params' => true
+        ),
+        'view_products.after' => array(
+            'params' => true
+        ),
+        'view_products.before' => array(
+            'params' => true
+        ),
+        'view_promos' => array(
+            'params' => true
+        ),
+        'view_reviews' => array(
+            'params' => true
+        ),
+        'view_tags' => array(
+            'params' => true
+        ),
+        'web_push_send' => array(
             'params' => true
         )
     )
